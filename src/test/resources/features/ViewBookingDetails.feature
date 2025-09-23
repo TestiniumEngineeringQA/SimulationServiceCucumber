@@ -63,8 +63,8 @@ Feature: To view the restful-booker booking details
     When user makes a request to check the health of booking service
     Then user should get the response code 201
 
-  @get+Post+
-  Scenario: Get + Plus +
+  @get+Post
+  Scenario: Get + Plus
     Given the API endpoint is "https://jsonplaceholder.typicode.com/posts/5"
     When I send a GET request
     Then the response status code should be 200
