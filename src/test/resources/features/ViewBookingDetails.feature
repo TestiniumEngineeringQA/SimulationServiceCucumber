@@ -50,3 +50,22 @@ Feature: To view the restful-booker booking details
     Given user has access to endpoint "/ping"
     When user makes a request to check the health of booking service
     Then user should get the response code 400
+
+  @get+Post+
+  Scenario: Get Plus Post Plus
+    Given user has access to endpoint "/ping"
+    When user makes a request to check the health of booking service
+    Then user should get the response code 201
+
+  @getPlusPostPlus
+  Scenario: Get + Plus +
+    Given user has access to endpoint "/ping"
+    When user makes a request to check the health of booking service
+    Then user should get the response code 201
+
+  @get+Post+
+  Scenario: Get + Plus +
+    Given the API endpoint is "https://jsonplaceholder.typicode.com/posts/5"
+    When I send a GET request
+    Then the response status code should be 200
+    And the response should contain "userId"
