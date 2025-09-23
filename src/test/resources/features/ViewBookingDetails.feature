@@ -69,3 +69,27 @@ Feature: To view the restful-booker booking details
     When I send a GET request
     Then the response status code should be 200
     And the response should contain "userId"
+
+
+  Scenario:  Get post with no tag
+    Given user has access to endpoint "/ping"
+    When user makes a request to check the health of booking service
+    Then user should get the response code 201
+
+  @getPostWithNoName
+  Scenario:
+    Given user has access to endpoint "/ping"
+    When user makes a request to check the health of booking service
+    Then user should get the response code 201
+
+  @getPostWithNameAndTag
+  Scenario:Get Post With Name And Tag
+    Given user has access to endpoint "/ping"
+    When user makes a request to check the health of booking service
+    Then user should get the response code 201
+
+  @getPostWithTagOnName
+  Scenario:Get Post With Tag On Name
+    Given user has access to endpoint "/ping"
+    When user makes a request to check the health of booking service
+    Then user should get the response code 201
