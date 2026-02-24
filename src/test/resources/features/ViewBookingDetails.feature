@@ -1,23 +1,23 @@
 @bookerAPI @viewBooking
 Feature: To view the restful-booker booking details
 
-  @Deneme00
-  Scenario:
+
+  Scenario: Deneme00
     Given user has access to endpoint "/booking"
     When user makes a request to view booking IDs
     Then user should get the response code 200
     And user should see all the booking IDs
 
-  @Deneme01
-  Scenario:
+
+  Scenario: Deneme01
     Given user has access to endpoint "/booking"
     When user makes a request to view booking IDs
     And user makes a request to view details of a booking ID
     Then user should get the response code 200
     And user validates the response with JSON schema "bookingDetailsSchema.json"
 
-  @Deneme02
-  Scenario Outline:
+
+  Scenario Outline: Deneme02
     Given user has access to endpoint "/booking"
     When user makes a request to view booking IDs from "<checkin>" to "<checkout>"
     Then user should get the response code 200
@@ -28,8 +28,8 @@ Feature: To view the restful-booker booking details
       | 2018-01-01 | 2021-12-31 |
       | 2010-01-01 | 2020-12-31 |
 
-  @Deneme03
-  Scenario:
+
+  Scenario: Deneme03
     Given user has access to endpoint "/booking"
     When user makes a request to view booking IDs
     Then user should see all the booking IDs
@@ -38,40 +38,39 @@ Feature: To view the restful-booker booking details
     And user should get the response code 200
     And user should see all the booking IDs
 
-  @Deneme04
-  Scenario:
+
+  Scenario: Deneme04
     Given user has access to endpoint "/ping"
     When user makes a request to check the health of booking service
     Then user should get the response code 201
 
 
-  @Deneme05
-    Scenario:
+  Scenario: Deneme05
     Given user has access to endpoint "/ping"
     When user makes a request to check the health of booking service
     Then user should get the response code 400
 
-  @Deneme06
-  Scenario:
+
+  Scenario: Deneme06
     Given user has access to endpoint "/ping"
     When user makes a request to check the health of booking service
     Then user should get the response code 201
 
-  @Deneme07
-  Scenario:
+
+  Scenario: Deneme07
     Given user has access to endpoint "/ping"
     When user makes a request to check the health of booking service
     Then user should get the response code 201
 
-  @Deneme08
-  Scenario:
+
+  Scenario: Deneme08
     Given the API endpoint is "https://jsonplaceholder.typicode.com/posts/5"
     When I send a GET request
     Then the response status code should be 200
     And the response should contain "userId"
 
-  @Deneme09
-  Scenario:
+
+  Scenario: Deneme09
     Given user has access to endpoint "/ping"
     When user makes a request to check the health of booking service
     Then user should get the response code 201
